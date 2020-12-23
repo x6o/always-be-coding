@@ -55,4 +55,32 @@ static void Main(string[] args)
         }
         Console.WriteLine();
     }
+
+    // Print all even numbers
+    for (int i = 1; i < 20; i++)
+    {
+        if (i % 2 == 0) Console.WriteLine("Even: " + i);
+    }
+
+    // Triangle
+    // Print a triangle like the following:
+    //
+    // 0
+    // 00
+    // 000
+    // 0000
+    // 00000
+    // 000000
+    // 0000000
+    // 00000000
+    // 000000000
+
+    for (int j = 0; j < 15; j++)
+    {
+        for (int c = 1; c <= j; c++)
+        {
+            Console.Write("0 ");
+        }
+        Console.WriteLine();
+    }
 }
