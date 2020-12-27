@@ -5,8 +5,8 @@ Variables
 */
 
 body {
-  background: #000 !important;
-  color: white !important;
+  /* background: #000 !important;
+  color: white !important; */
 }
 :root {
   /* dark shades of primary color*/
@@ -17,7 +17,7 @@ body {
   /* primary/main color */
   --clr-primary-5: hsl(205, 78%, 60%);
   /* lighter shades of primary color */
-  --clr-primary-6: hsl(205, 89%, 70%);
+  --clr-primary-6: hsl(204, 14%, 36%);
   --clr-primary-7: hsl(205, 90%, 76%);
   --clr-primary-8: hsl(205, 86%, 81%);
   --clr-primary-9: hsl(205, 90%, 88%);
