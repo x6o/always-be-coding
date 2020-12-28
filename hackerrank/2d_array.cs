@@ -28,8 +28,6 @@ class Solution
         */
         int max = -99999, sum = 0;
 
-
-
         for (int y = 0; y <= 3; y++)
         {
             for (int x = 0; x <= 3; x++)
