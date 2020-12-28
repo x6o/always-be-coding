@@ -5,11 +5,7 @@ import {data} from '../../../data';
 
 const PropDrilling = () => {
   const [people, setPeople] = useState(data);
-  const [isReloadBtnVisible, setIsReloadBtnVisible] = useState(false);
   const removePerson = (id) => {
-    if (people.length === 1) {
-      setIsReloadBtnVisible(true);
-    }
     setPeople((people) => {
       return people.filter((person) => person.id !== id);
     })
@@ -19,7 +15,6 @@ const PropDrilling = () => {
   return <>
     <section>
       <h3>prop drilling</h3>
-      {isReloadBtnVisible ? <button styl onClick={() => setPeople(data)}>Reload data</button> : null}
       <List people={people} removePerson={removePerson} />
     </section>
   </>;
