@@ -2,9 +2,18 @@ import React from 'react';
 
 const Loading = () => {
   return (
-    <div className="loading">
-      <h1>loading...</h1>
-    </div>
+    <>
+      <div className="title">
+        <h2>Our Tours</h2>
+        <div className="underline"></div>
+      </div>
+      <div className="loading">
+        <div class="spinner">
+          <div class="cube1"></div>
+          <div class="cube2"></div>
+        </div>
+      </div>
+    </>
   );
 };
 
