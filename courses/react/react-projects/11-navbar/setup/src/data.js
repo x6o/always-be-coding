@@ -26,6 +26,11 @@ export const links = [
     url: '/profile',
     text: 'profile',
   },
+  {
+    id: 6,
+    url: '/test',
+    text: 'test item',
+  },
 ]
 
 export const social = [
