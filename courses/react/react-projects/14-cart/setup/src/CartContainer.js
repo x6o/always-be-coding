@@ -24,7 +24,6 @@ const CartContainer = () => {
       {/* cart items */}
       <div>
         {cart.map((item) => {
-          console.log(item)
           return <CartItem key={item.id} {...item} />
         })}
       </div>
@@ -33,7 +32,7 @@ const CartContainer = () => {
         <hr />
         <div className='cart-total'>
           <h4>
-            total <span>{total}</span>
+            total <span>${total}</span>
           </h4>
         </div>
         <button
