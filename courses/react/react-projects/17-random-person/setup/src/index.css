@@ -208,6 +208,7 @@ p {
 .user-value {
   color: var(--clr-grey-1);
   font-size: 28px;
+  cursor: pointer;
 }
 .values-list {
   display: grid;
