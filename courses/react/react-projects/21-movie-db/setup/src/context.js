@@ -8,7 +8,7 @@ const AppProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState({ show:false, msg:'' });
   const [movies, setMovies] = useState([]);
-  const [query, setQuery] = useState('batman');
+  const [query, setQuery] = useState('omg');
   
   const fetchMovies = async (url) => {
     setLoading(true);
@@ -24,6 +24,7 @@ const AppProvider = ({ children }) => {
     } catch (error) {
       console.log(error);
     }
+    setLoading(false);
   }
 
   useEffect(() => {
