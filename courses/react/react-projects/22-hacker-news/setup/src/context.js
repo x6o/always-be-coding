@@ -38,14 +38,20 @@ const AppProvider = ({ children }) => {
   }
 
   const removeStory = (id) => {
-    dispatch({type: reducerActions.REMOVE_STORY, payload: id})
+    dispatch({ type: reducerActions.REMOVE_STORY, payload: id })
   }
 
   useEffect(() => {
     fetchStories(`${API_ENDPOINT}query=${state.query}&page=${state.page}`);
-  }, [])
+  }, [state.query])
 
-  return <AppContext.Provider value={{ ...state, removeStory }}>{children}</AppContext.Provider>
+  const handleSearch = (query) => {
+    dispatch({ type: reducerActions.HANDLE_SEARCH, payload: query });
+  }
+  return <AppContext.Provider
+    value={{ ...state, removeStory, handleSearch }}>
+    {children}
+  </AppContext.Provider>
 }
 // make sure use
 export const useGlobalContext = () => {

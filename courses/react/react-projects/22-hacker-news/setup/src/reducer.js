@@ -9,6 +9,8 @@ const reducer = (state, action) => {
       return {...state, isLoading: false, hits: payload.hits, nbPages: payload.nbPages}
     case reducerActions.REMOVE_STORY:
       return {...state, hits: state.hits.filter(p => p.objectID !== action.payload)}
+    case reducerActions.HANDLE_SEARCH:
+      return {...state, query: action.payload, page: 0}
     default:
       throw new Error(`No action matched for "${action.type}" action type.`)
   }
