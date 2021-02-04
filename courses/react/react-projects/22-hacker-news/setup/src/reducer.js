@@ -1,10 +1,11 @@
-import {
-  SET_LOADING,
-  SET_STORIES,
-  REMOVE_STORY,
-  HANDLE_PAGE,
-  HANDLE_SEARCH,
-} from './actions'
+import * as reducerActions from './actions'
 
-const reducer = () => {}
+const reducer = (state, action) => {
+  switch(action.type) {
+    case reducerActions.SET_LOADING:
+      return {...state, isLoading: true}
+    default:
+      throw new Error(`No action matched for "${action.type}" action type.`)
+  }
+}
 export default reducer
