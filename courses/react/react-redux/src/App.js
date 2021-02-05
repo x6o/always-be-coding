@@ -1,4 +1,6 @@
 import React from "react";
+import reduxActions from './actions'
+import reducer from './reducer'
 
 // components
 import Navbar from "./components/Navbar";
@@ -8,31 +10,29 @@ import CartContainer from "./components/CartContainer";
 import cartItems from "./cart-items";
 
 // redux stuff
-import {createStore} from 'redux'
+import { createStore } from 'redux'
+
+import { Provider } from "react-redux"
 
 // initial store
 const initialStore = {
-  count: 0
-};
-
-// reducer - fn to update store
-const reducer = (state, action) => {
-  console.log({state, action});
-  return state;
+  cart: cartItems,
+  total: 0,
+  amount: 2,
 };
 
 // store - aka state
 const store = createStore(reducer, initialStore);
 
-
+console.log(store.getState());
 function App() {
   // cart setup
 
   return (
-    <main>
-      <Navbar cart={store.getState()} />
+    <Provider store={store}>
+      <Navbar />
       <CartContainer cart={cartItems} />
-    </main>
+    </Provider>
   );
 }
 
