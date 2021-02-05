@@ -3,8 +3,8 @@ const reduxActions = {
     INCREASE: 'INCREASE',
     REMOVE: 'REMOVE',
     CLEAR_CART: 'CLEAR_CART',
-    GET_TOTAL: 'GET_TOTAL',
-    GET_AMOUNT: 'GET_AMOUNT'
+    GET_TOTALS: 'GET_TOTALS',
+    TOGGLE_AMOUNT: 'TOGGLE_AMOUNT'
 }
 
 export default reduxActions

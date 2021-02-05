@@ -4,6 +4,11 @@ import {connect} from "react-redux"
 import reactActions from "./../actions";
 
 const CartContainer = ({ cart = [], total, dispatch}) => {
+
+  React.useEffect(() => {
+    dispatch({type: reactActions.GET_TOTALS});
+  }, )
+
   if (cart.length === 0) {
     return (
       <section className="cart">
